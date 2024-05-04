@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luke Thompson - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    
+    <div id="nav-placeholder">
+
+    </div>
+
+    <div id="home">
+        <h2>Contact</h2>
+        <p>Contact info goes here</p>
+    </div>
+    <script>
+        $(function(){
+            $("#nav-placeholder").load("/components/nav.html", function() {
+                var currentPage = window.location.pathname;
+                $('nav ul li a').each(function(){
+                    var href = $(this).attr('href');
+                    if (href === currentPage) {
+                        $(this).addClass('on');
+                    } else {
+                        $(this).removeClass('on');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
