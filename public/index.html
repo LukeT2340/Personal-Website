@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luke Thompson</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+    <div class="nav-container">
+        <div class="logo">
+            <h1><span class="first-name">LUKE</span><span class="last-name">THOMPSON</span></h1>
+        </div>
+        <div class="links">
+            <nav>
+                <ul>
+                    <li><a href="#home" id="nav-home-link">HOME</a></li>
+                    <li><a href="#about">ABOUT ME</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="https://github.com/LukeT2340"><img src="GitHub_Logo_White.png"></a></li>
+                </ul>
+            </nav>   
+        </div>
+    </div>
+
+    <section id="home" class="content-container reveal">
+        <div class="introduction-container">
+            <h4 id="my-name-is-text">Hi, my name is</h4>
+            <h1 id="my-name-text">Luke Thompson.</h1>
+            <h1 id="what-i-do-text">I build mobile apps and websites.</h1>
+            <h5 id="blurb-text">I'm a Computer Science Student specializing in Artificial Intelligence. During my spare time I build websites and IOS applications. Currently in pursuit of an internship.</h5>
+            <a class="contact-me-button" href="#contact">Contact me!</a>
+        </div>
+    </section>
+    <section id="about" class="content-container reveal">
+        <div class="aboutme-container">
+            <h3 id="aboutme-title">1. About Me</h3>
+            <p>Hey there! I’m Luke, a software enthusiast that enjoys building things on the web and delving into the world of artificial intelligence. I did my Bachelor of Science at the University of Newcastle, where I majored in Physics and graduated with a GPA of 6.7/7.0, and I’m currently in my final year of my Master’s in Computer Science at Monash University.</p>
+            <p>Proficient in many programming languages, I’m eager to put my knowledge and skills to the test in a hands-on internship. Some of the programming languages I enjoy using are</p>
+            <ul>
+                <li>Python</li>
+                <li>Java</li>
+                <li>Swift</li>
+                <li>Javascript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>SQL</li>
+            </ul>
+        </div>
+        <div>
+            <h1>Image of myself will go here</h1>
+        </div>
+    </section>
+    <section id="projects" class="content-container reveal">
+
+    </section>
+    <section id="contact" class="content-container reveal">
+        <div class="introduction-text">
+            <h3 class="profession">Software Developer</h3>
+            <p class="summary">Hello, I'm Luke, a driven software enthusiast currently pursuing a Master's in Computer Science, specializing in Artificial Intelligence at Monash University. With a robust Bachelor's degree in Physics boasting a GPA of 6.7/7.0, I bring a strong analytical background to the table. Proficient in Python, Java, Swift, and SQL, I enjoy building mobile and web apps during my spare time, and I'm eager to leverage my skills in a dynamic internship. I am committed to delivering fresh perspectives, coupled with a strong work ethic, and am dedicated to both personal and professional growth.</p>
+            <a class="contact-me-button" href="/contact">Contact me!</a>
+        </div>
+        <div class="screen-shots">
+            <img src="AppScreenshots.png" class="app-screenshots">
+        </div>
+    </section>
+    <script type="text/javascript">
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        window.addEventListener('load', function() {
+            reveal();
+            document.getElementById('home').classList.add('active');
+        });
+        window.addEventListener('scroll', reveal);
+
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for(var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var revealTop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+
+                if (revealTop < windowHeight - revealpoint) {
+                    reveals[i].classList.add('active');
+                } else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
