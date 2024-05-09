@@ -12,6 +12,17 @@ body {
 
 /* ---- Navigation Bar Styling ---- */
 
+.first-name {
+    font-size: larger;
+    color: white;
+}
+
+.last-name {
+    font-weight: lighter;
+    font-size: large;
+    color: #82d0d2;
+}
+
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -51,19 +62,6 @@ nav ul .on {
     color: #82d0d2;
 }
 
-/* ---------------------------- */
-
-.first-name {
-    font-size: larger;
-    color: white;
-}
-
-.last-name {
-    font-weight: lighter;
-    font-size: large;
-    color: #82d0d2;
-}
-
 .links a {
     display: inline-block;
     min-width: 100px;
@@ -83,6 +81,10 @@ nav ul .on {
     height: auto; 
 }
 
+/* ---------------------------- */
+
+/* ---- Each Section Shared Styling ---- */
+
 .content-container {
     display: flex;
     flex-direction: row;
@@ -93,6 +95,35 @@ nav ul .on {
     width: auto;
     padding-bottom: 100px;
     padding-top: 100px;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(200px);
+    opacity: 0;
+    transition: all 3s ease;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+/* ---------------------------- */
+
+/* ---- Home Section Styling ---- */
+
+#my-name-is-text {
+    font-size: 1.2em;
+    color: #82d0d2;
+    margin: 0;
+    padding: 0;
+}
+
+#my-name-text {
+    font-size: 3.5em;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -108,41 +139,9 @@ nav ul .on {
     margin-bottom: 70px;
 }
 
-.app-screenshots {
-    width: 500px;
-    height: auto;
-    border-radius: 10px;
-    margin-left: 10px;
-}
-
-.reveal {
-    position: relative;
-    transform: translateY(200px);
-    opacity: 0;
-    transition: all 3s ease;
-}
-
-.reveal.active {
-    transform: translateY(0px);
-    opacity: 1;
-}
-
 .introduction-container {
     width: 800px;
     height: auto;
-}
-
-#my-name-is-text {
-    font-size: 1em;
-    color: #82d0d2;
-    margin: 0;
-    padding: 0;
-}
-
-#my-name-text {
-    font-size: 3.5em;
-    margin: 0;
-    padding: 0;
 }
 
 #what-i-do-text {
@@ -153,13 +152,12 @@ nav ul .on {
 }
 
 #blurb-text {
-    font-size: 0.8em;
+    font-size: 1em;
     margin: 0;
     padding: 0 0 40px 0;
     color: rgb(191, 190, 190);
     width: 500px;
 }
-
 
 .contact-me-button {
     border-radius: 3px;
@@ -171,6 +169,10 @@ nav ul .on {
     font-size: 1em;
 }
 
+/* ---------------------------- */
+
+/* ---- About Me Section Styling ---- */
+
 .contact-me-button:hover {
     background-color: white;
     color: black;
@@ -180,10 +182,23 @@ nav ul .on {
 .aboutme-container {
     width: 500px;
     height: auto;
+    font-size: 1.2em;
 }
 
 
 #aboutme-title {
     color: #82d0d2;
 }
+
+/* ---------------------------- */
+
+
+
+.app-screenshots {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
 
